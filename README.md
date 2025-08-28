@@ -1,6 +1,6 @@
 # 🚀 Vignesh M Portfolio
 
-[![Live Demo](https://img.shields.io/badge/Live%20Demo-GitHub%20Pages-blue?style=for-the-badge)](https://vig-nesh-m.github.io/vigneshmportfolio/)
+[![Live Demo](https://img.shields.io/badge/Live%20Demo-GitHub%20Pages-blue?style=for-the-badge)](https://vigneshm.gt.tc)
 [![GitHub](https://img.shields.io/badge/GitHub-Repository-black?style=for-the-badge&logo=github)](https://github.com/VIG-NESH-M/vigneshmportfolio)
 [![Deploy](https://img.shields.io/badge/Deploy-Automatic-green?style=for-the-badge)](https://github.com/VIG-NESH-M/vigneshmportfolio/actions)
 
