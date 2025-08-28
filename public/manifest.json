@@ -1,0 +1,20 @@
+{
+  "name": "Vignesh M - Full Stack Developer Portfolio",
+  "short_name": "Vignesh M",
+  "description": "Creative full-stack developer specializing in React, Angular, and clean design",
+  "start_url": "/",
+  "display": "standalone",
+  "background_color": "#0a0a0a",
+  "theme_color": "#34d399",
+  "orientation": "portrait-primary",
+  "icons": [
+    {
+      "src": "/favicon.svg",
+      "sizes": "any",
+      "type": "image/svg+xml",
+      "purpose": "any maskable"
+    }
+  ],
+  "categories": ["portfolio", "developer", "business"],
+  "lang": "en-US"
+}

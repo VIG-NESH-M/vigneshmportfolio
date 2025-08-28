@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+    <!-- SEO Meta Tags -->
+    <title>
+      Vignesh M - Full Stack Developer | React, Angular & Clean Design
+    </title>
+    <meta
+      name="description"
+      content="Creative full-stack developer specializing in React, Angular, and clean design. I craft lightning-fast frontends and scalable backends with a strong eye for UX and performance."
+    />
+    <meta
+      name="keywords"
+      content="Vignesh M, Full Stack Developer, React, Angular, Frontend Developer, Backend Developer, Web Developer, JavaScript, TypeScript, Node.js"
+    />
+    <meta name="author" content="Vignesh M" />
+
+    <!-- Open Graph / Facebook -->
+    <meta property="og:type" content="website" />
+    <meta property="og:url" content="https://vigneshmportfolio.vercel.app/" />
+    <meta property="og:title" content="Vignesh M - Full Stack Developer" />
+    <meta
+      property="og:description"
+      content="Creative full-stack developer specializing in React, Angular, and clean design."
+    />
+    <meta
+      property="og:image"
+      content="https://vigneshmportfolio.vercel.app/og-image.jpg"
+    />
+
+    <!-- Twitter -->
+    <meta property="twitter:card" content="summary_large_image" />
+    <meta
+      property="twitter:url"
+      content="https://vigneshmportfolio.vercel.app/"
+    />
+    <meta property="twitter:title" content="Vignesh M - Full Stack Developer" />
+    <meta
+      property="twitter:description"
+      content="Creative full-stack developer specializing in React, Angular, and clean design."
+    />
+    <meta
+      property="twitter:image"
+      content="https://vigneshmportfolio.vercel.app/og-image.jpg"
+    />
+
+    <!-- Favicon -->
+    <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
+    <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png" />
+    <link rel="manifest" href="/manifest.json" />
+
+    <!-- Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Inter:wght@400;700;900&family=Space+Mono:wght@400;700&display=swap"
+      rel="stylesheet"
+    />
+
+    <!-- Theme Color -->
+    <meta name="theme-color" content="#34d399" />
+
+    <!-- Prevent theme flash on load -->
+    <script>
+      (function () {
+        const getInitialTheme = () => {
+          const savedTheme = localStorage.getItem("portfolio-theme");
+          if (savedTheme && (savedTheme === "dark" || savedTheme === "light")) {
+            return savedTheme;
+          }
+          if (
+            window.matchMedia &&
+            window.matchMedia("(prefers-color-scheme: light)").matches
+          ) {
+            return "light";
+          }
+          return "dark";
+        };
+
+        const theme = getInitialTheme();
+        document.documentElement.className = theme + "-theme";
+        document.body.className = theme + "-theme";
+      })();
+    </script>
+  </head>
+  <body>
+    <div id="root"></div>
+    <script type="module" src="/src/main.tsx"></script>
+  </body>
+</html>
