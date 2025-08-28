@@ -15,6 +15,7 @@ This guide covers multiple deployment options for your portfolio, from free host
 ## ⚡ Quick Deploy
 
 ### Prerequisites
+
 - GitHub account
 - Node.js 18+ installed
 - Supabase project set up
@@ -49,12 +50,14 @@ This project includes a pre-configured GitHub Actions workflow for automatic dep
 #### Setup Steps
 
 1. **Fork or clone the repository**
+
    ```bash
    git clone https://github.com/VIG-NESH-M/vigneshmportfolio.git
    cd vigneshmportfolio
    ```
 
 2. **Push to your GitHub repository**
+
    ```bash
    git remote add origin https://github.com/YOUR_USERNAME/YOUR_REPO.git
    git push -u origin main
@@ -69,6 +72,7 @@ This project includes a pre-configured GitHub Actions workflow for automatic dep
 #### Workflow Configuration
 
 The included `.github/workflows/deploy.yml` file handles:
+
 - ✅ Node.js 18 setup with npm caching
 - ✅ Dependency installation with `npm ci`
 - ✅ Production build with `npm run build`
@@ -78,6 +82,7 @@ The included `.github/workflows/deploy.yml` file handles:
 #### Manual Trigger
 
 You can also trigger deployment manually:
+
 - Go to **Actions** tab in your repository
 - Select "Deploy to GitHub Pages" workflow
 - Click "Run workflow"
@@ -89,7 +94,7 @@ For GitHub Pages, the project is configured with the correct base path:
 ```typescript
 // vite.config.ts
 export default defineConfig({
-  base: '/vigneshmportfolio/', // Matches repository name
+  base: "/vigneshmportfolio/", // Matches repository name
 });
 ```
 
@@ -100,11 +105,13 @@ Update this if your repository has a different name.
 ### Automatic Deployment
 
 1. **Connect GitHub to Vercel**
+
    - Visit [vercel.com](https://vercel.com)
    - Sign up/login with GitHub
    - Click "New Project"
 
 2. **Import Repository**
+
    - Select your portfolio repository
    - Vercel auto-detects Vite configuration
    - Click "Deploy"
@@ -131,15 +138,17 @@ vercel --prod
 ### Custom Domain on Vercel
 
 1. **Add Domain**
+
    - Go to project dashboard
    - Navigate to **Settings** → **Domains**
    - Add your custom domain
 
 2. **DNS Configuration**
+
    ```bash
    # Add CNAME record pointing to vercel-dns.com
    CNAME www vercel-dns.com
-   
+
    # For apex domain, add A record
    A @ 76.76.19.61
    ```
@@ -149,6 +158,7 @@ vercel --prod
 ### Drag and Drop Deployment
 
 1. **Build the project**
+
    ```bash
    npm run build
    ```
@@ -160,15 +170,17 @@ vercel --prod
 ### Git-based Deployment
 
 1. **Connect Repository**
+
    - Login to Netlify with GitHub
    - Click "New site from Git"
    - Select your repository
 
 2. **Build Settings**
+
    ```bash
    # Build command
    npm run build
-   
+
    # Publish directory
    dist
    ```
@@ -243,13 +255,13 @@ The project includes production optimizations:
 // vite.config.ts optimizations
 export default defineConfig({
   build: {
-    minify: 'esbuild',
-    target: 'es2015',
+    minify: "esbuild",
+    target: "es2015",
     rollupOptions: {
       output: {
         manualChunks: {
-          vendor: ['react', 'react-dom'],
-          supabase: ['@supabase/supabase-js'],
+          vendor: ["react", "react-dom"],
+          supabase: ["@supabase/supabase-js"],
         },
       },
     },
@@ -291,15 +303,15 @@ SUPABASE_URL=...      ❌
 For Single Page Applications, configure your hosting:
 
 **Vercel**: Create `vercel.json`
+
 ```json
 {
-  "rewrites": [
-    { "source": "/(.*)", "destination": "/index.html" }
-  ]
+  "rewrites": [{ "source": "/(.*)", "destination": "/index.html" }]
 }
 ```
 
 **Netlify**: Create `_redirects` in `public/`
+
 ```
 /*    /index.html   200
 ```
@@ -344,6 +356,7 @@ npx vite-bundle-analyzer dist
 ### Monitoring and Analytics
 
 #### Google Analytics Setup
+
 ```typescript
 // Add to index.html
 <script async src="https://www.googletagmanager.com/gtag/js?id=GA_TRACKING_ID"></script>
@@ -356,6 +369,7 @@ npx vite-bundle-analyzer dist
 ```
 
 #### Vercel Analytics
+
 ```bash
 npm install @vercel/analytics
 ```
@@ -385,18 +399,21 @@ import { Analytics } from '@vercel/analytics/react';
 ## 📈 Post-Deployment
 
 ### SEO Optimization
+
 - Submit sitemap to Google Search Console
 - Verify Google My Business listing
 - Add portfolio to professional directories
 - Create social media profiles linking to portfolio
 
 ### Monitoring
+
 - Set up uptime monitoring (UptimeRobot, Pingdom)
 - Configure error tracking (Sentry, LogRocket)
 - Monitor Core Web Vitals (PageSpeed Insights)
 - Track user analytics and engagement
 
 ### Maintenance
+
 - Regular dependency updates
 - Content updates through admin panel
 - Backup Supabase database regularly

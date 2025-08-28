@@ -9,6 +9,7 @@
 ## ✨ Features
 
 ### 🎨 Frontend
+
 - **Modern React 19** with TypeScript for type safety
 - **Tailwind CSS 4** for responsive, utility-first styling
 - **Lucide React Icons** for consistent iconography
@@ -17,6 +18,7 @@
 - **Dark/Light theme support** with system preference detection
 
 ### 🛠️ Admin Panel
+
 - **Comprehensive Dashboard** with real-time analytics
 - **Dynamic Content Management** for all portfolio sections
 - **CRUD Operations** for projects, skills, experience, and social links
@@ -26,6 +28,7 @@
 - **Real-time Updates** with Supabase integration
 
 ### 📱 Responsive Sections
+
 - **Hero Section** with animated call-to-action
 - **About Page** with professional summary
 - **Projects Gallery** with filtering and detailed views
@@ -34,6 +37,7 @@
 - **Experience Timeline** with company details
 
 ### ⚡ Performance
+
 - **Vite** for lightning-fast development and builds
 - **Code Splitting** for optimal loading times
 - **ESLint** with strict TypeScript rules
@@ -41,16 +45,16 @@
 
 ## 🏗️ Tech Stack
 
-| Category | Technology | Version |
-|----------|------------|---------|
-| **Frontend** | React | 19.1.0 |
-| **Language** | TypeScript | 5.8.3 |
-| **Styling** | Tailwind CSS | 4.1.11 |
-| **Icons** | Lucide React | 0.536.0 |
-| **Backend** | Supabase | 2.56.0 |
-| **Build Tool** | Vite | 7.0.4 |
-| **Linting** | ESLint | 9.30.1 |
-| **Deployment** | GitHub Pages | - |
+| Category       | Technology   | Version |
+| -------------- | ------------ | ------- |
+| **Frontend**   | React        | 19.1.0  |
+| **Language**   | TypeScript   | 5.8.3   |
+| **Styling**    | Tailwind CSS | 4.1.11  |
+| **Icons**      | Lucide React | 0.536.0 |
+| **Backend**    | Supabase     | 2.56.0  |
+| **Build Tool** | Vite         | 7.0.4   |
+| **Linting**    | ESLint       | 9.30.1  |
+| **Deployment** | GitHub Pages | -       |
 
 ## 🚦 Getting Started
 
@@ -63,28 +67,33 @@
 ### 📦 Installation
 
 1. **Clone the repository**
+
    ```bash
    git clone https://github.com/VIG-NESH-M/vigneshmportfolio.git
    cd vigneshmportfolio
    ```
 
 2. **Install dependencies**
+
    ```bash
    npm install
    ```
 
 3. **Set up environment variables**
+
    ```bash
    cp .env.example .env
    ```
-   
+
    Update `.env` with your Supabase credentials:
+
    ```env
    VITE_SUPABASE_URL=your_supabase_project_url
    VITE_SUPABASE_ANON_KEY=your_supabase_anon_key
    ```
 
 4. **Start development server**
+
    ```bash
    npm run dev
    ```
@@ -98,6 +107,7 @@
 1. **Create a new Supabase project** at [supabase.com](https://supabase.com)
 
 2. **Run the setup scripts**
+
    ```bash
    # Set up database tables and policies
    chmod +x setup-supabase.sh
@@ -181,42 +191,50 @@ CREATE TABLE contact_messages (
 ### Admin Features
 
 #### 📊 Dashboard
+
 - Overview of all content sections
 - Quick stats and recent activity
 - System health indicators
 
 #### ⚙️ Configuration Manager
+
 - Hero section content and statistics
 - Site metadata and SEO settings
 - Theme and appearance options
 
 #### 🧭 Navigation Manager
+
 - Add/edit navigation menu items
 - Reorder menu items with drag-and-drop
 - Toggle menu item visibility
 
 #### 💼 Experience Manager
+
 - Add/edit work experience entries
 - Company details and role descriptions
 - Date ranges and achievement highlights
 
 #### 🔗 Social Links Manager
+
 - Manage social media profiles
 - Custom icons and platform links
 - Visibility controls
 
 #### 🚀 Projects Manager
+
 - Add/edit portfolio projects
 - Tech stack management
 - GitHub and live demo links
 - Project screenshots and descriptions
 
 #### 🛠️ Skills Manager
+
 - Technical skills with proficiency levels
 - Skill categories and grouping
 - Visual proficiency indicators
 
 #### 📨 Messages Manager
+
 - View contact form submissions
 - Message status tracking (unread/read/replied)
 - Direct email integration
@@ -234,18 +252,21 @@ The project includes GitHub Actions for automatic deployment to GitHub Pages:
 ### Manual Deployment
 
 #### GitHub Pages
+
 ```bash
 npm run build
 # Upload dist/ folder to your hosting provider
 ```
 
 #### Vercel
+
 ```bash
 npm i -g vercel
 vercel --prod
 ```
 
 #### Netlify
+
 ```bash
 npm run build
 # Drag and drop dist/ folder to Netlify dashboard
@@ -318,21 +339,21 @@ vigneshmportfolio/
 
 ## 🧪 Available Scripts
 
-| Script | Description |
-|--------|-------------|
-| `npm run dev` | Start development server on port 5173 |
-| `npm run build` | Build production bundle to `dist/` |
-| `npm run preview` | Preview production build locally |
-| `npm run lint` | Run ESLint for code quality checks |
+| Script            | Description                           |
+| ----------------- | ------------------------------------- |
+| `npm run dev`     | Start development server on port 5173 |
+| `npm run build`   | Build production bundle to `dist/`    |
+| `npm run preview` | Preview production build locally      |
+| `npm run lint`    | Run ESLint for code quality checks    |
 
 ## 🔧 Configuration
 
 ### Environment Variables
 
-| Variable | Description | Required |
-|----------|-------------|----------|
-| `VITE_SUPABASE_URL` | Your Supabase project URL | ✅ |
-| `VITE_SUPABASE_ANON_KEY` | Your Supabase anonymous key | ✅ |
+| Variable                 | Description                 | Required |
+| ------------------------ | --------------------------- | -------- |
+| `VITE_SUPABASE_URL`      | Your Supabase project URL   | ✅       |
+| `VITE_SUPABASE_ANON_KEY` | Your Supabase anonymous key | ✅       |
 
 ### Vite Configuration
 
@@ -340,7 +361,7 @@ vigneshmportfolio/
 // vite.config.ts
 export default defineConfig({
   plugins: [react(), tailwindcss()],
-  base: '/vigneshmportfolio/', // GitHub Pages base path
+  base: "/vigneshmportfolio/", // GitHub Pages base path
 });
 ```
 
@@ -349,7 +370,7 @@ export default defineConfig({
 ```javascript
 // tailwind.config.js
 module.exports = {
-  content: ['./src/**/*.{js,ts,jsx,tsx}'],
+  content: ["./src/**/*.{js,ts,jsx,tsx}"],
   theme: {
     extend: {
       // Custom theme extensions
@@ -364,6 +385,7 @@ module.exports = {
 ### Common Issues
 
 #### Build Errors
+
 ```bash
 # Clear node_modules and reinstall
 rm -rf node_modules package-lock.json
@@ -371,11 +393,13 @@ npm install
 ```
 
 #### Supabase Connection Issues
+
 1. Verify environment variables are correct
 2. Check Supabase project status
 3. Ensure RLS policies are properly configured
 
 #### Deployment Issues
+
 1. Check GitHub Actions logs
 2. Verify `base` path in `vite.config.ts`
 3. Ensure GitHub Pages is enabled in repository settings
@@ -399,6 +423,7 @@ Contributions are welcome! Please feel free to submit a Pull Request. For major 
 ## 📞 Contact
 
 **Vignesh M**
+
 - Portfolio: [https://vig-nesh-m.github.io/vigneshmportfolio/](https://vig-nesh-m.github.io/vigneshmportfolio/)
 - GitHub: [@VIG-NESH-M](https://github.com/VIG-NESH-M)
 - LinkedIn: [LinkedIn Profile](https://linkedin.com/in/vignezhm)
