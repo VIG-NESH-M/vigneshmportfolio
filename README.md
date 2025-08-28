@@ -401,7 +401,7 @@ Contributions are welcome! Please feel free to submit a Pull Request. For major 
 **Vignesh M**
 - Portfolio: [https://vig-nesh-m.github.io/vigneshmportfolio/](https://vig-nesh-m.github.io/vigneshmportfolio/)
 - GitHub: [@VIG-NESH-M](https://github.com/VIG-NESH-M)
-- LinkedIn: [Your LinkedIn Profile](https://linkedin.com/in/your-profile)
+- LinkedIn: [Your LinkedIn Profile](https://linkedin.com/in/vignezh_m)
 
 ## 🙏 Acknowledgments
 
