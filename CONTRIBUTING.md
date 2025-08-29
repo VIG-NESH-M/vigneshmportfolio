@@ -30,6 +30,7 @@ By participating in this project, you agree to abide by our [Code of Conduct](CO
 ### First Time Setup
 
 1. **Fork the repository**
+
    ```bash
    # Click the "Fork" button on GitHub, then clone your fork
    git clone https://github.com/YOUR_USERNAME/vigneshmportfolio.git
@@ -37,16 +38,19 @@ By participating in this project, you agree to abide by our [Code of Conduct](CO
    ```
 
 2. **Add upstream remote**
+
    ```bash
    git remote add upstream https://github.com/VIG-NESH-M/vigneshmportfolio.git
    ```
 
 3. **Install dependencies**
+
    ```bash
    npm install
    ```
 
 4. **Set up environment**
+
    ```bash
    cp .env.example .env
    # Edit .env with your Supabase credentials
@@ -197,16 +201,16 @@ interface UserProps {
 
 // Use const assertions for readonly data
 const NAVIGATION_ITEMS = [
-  { label: 'Home', path: '/' },
-  { label: 'About', path: '/about' },
+  { label: "Home", path: "/" },
+  { label: "About", path: "/about" },
 ] as const;
 
 // Use proper error handling
 try {
   await apiCall();
 } catch (error) {
-  console.error('API call failed:', error);
-  throw new Error('Failed to fetch data');
+  console.error("API call failed:", error);
+  throw new Error("Failed to fetch data");
 }
 ```
 
@@ -216,21 +220,17 @@ try {
 // Use functional components with TypeScript
 interface ButtonProps {
   children: React.ReactNode;
-  variant?: 'primary' | 'secondary';
+  variant?: "primary" | "secondary";
   onClick?: () => void;
 }
 
 export const Button: React.FC<ButtonProps> = ({
   children,
-  variant = 'primary',
+  variant = "primary",
   onClick,
 }) => {
   return (
-    <button
-      className={`btn btn-${variant}`}
-      onClick={onClick}
-      type="button"
-    >
+    <button className={`btn btn-${variant}`} onClick={onClick} type="button">
       {children}
     </button>
   );
@@ -275,15 +275,18 @@ components/
 ### Manual Testing
 
 1. **Functionality Testing**
+
    - Test all new features thoroughly
    - Verify existing functionality still works
    - Test error handling and edge cases
 
 2. **Browser Testing**
+
    - Chrome, Firefox, Safari, Edge
    - Mobile browsers (iOS Safari, Chrome Mobile)
 
 3. **Device Testing**
+
    - Desktop (various screen sizes)
    - Tablet (iPad, Android tablets)
    - Mobile (iPhone, Android phones)
@@ -341,6 +344,7 @@ async function fetchUser(
 ## 🎉 Recognition
 
 Contributors will be:
+
 - Added to the contributors list in README.md
 - Mentioned in release notes for significant contributions
 - Credited in the CHANGELOG.md
@@ -374,6 +378,7 @@ Fixes #123
 ```
 
 **Types:**
+
 - `feat`: New feature
 - `fix`: Bug fix
 - `docs`: Documentation changes

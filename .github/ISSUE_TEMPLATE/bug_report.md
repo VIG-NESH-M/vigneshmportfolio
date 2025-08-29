@@ -1,7 +1,7 @@
 ---
 name: Bug Report
 about: Create a report to help us improve
-title: '[BUG] '
+title: "[BUG] "
 labels: bug
 assignees: VIG-NESH-M
 ---
@@ -32,11 +32,13 @@ If applicable, add screenshots to help explain your problem.
 ## 🌐 Environment
 
 **Desktop:**
+
 - OS: [e.g. macOS, Windows, Linux]
 - Browser: [e.g. Chrome, Safari, Firefox]
 - Version: [e.g. 91.0.4472.124]
 
 **Mobile:**
+
 - Device: [e.g. iPhone 13, Samsung Galaxy S21]
 - OS: [e.g. iOS 15.0, Android 12]
 - Browser: [e.g. Safari, Chrome Mobile]

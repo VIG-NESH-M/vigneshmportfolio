@@ -13,13 +13,15 @@ This is a complete rewrite of the portfolio featuring modern technologies and a 
 #### ✨ Major Features
 
 **🎨 Modern Frontend Stack**
+
 - React 19 + TypeScript for type-safe development
-- Tailwind CSS 4 for responsive, utility-first styling  
+- Tailwind CSS 4 for responsive, utility-first styling
 - Lucide React icons for consistent iconography
 - Client-side routing with smooth transitions
 - Dark/light theme with system preference detection
 
 **🛠️ Comprehensive Admin Panel**
+
 - Real-time dashboard with analytics
 - Dynamic content management for all sections
 - CRUD operations for projects, skills, experience
@@ -28,6 +30,7 @@ This is a complete rewrite of the portfolio featuring modern technologies and a 
 - Route-based secure admin access
 
 **📱 Enhanced User Experience**
+
 - Mobile-first responsive design
 - Professional contact form with validation
 - Animated hero section with statistics
@@ -36,6 +39,7 @@ This is a complete rewrite of the portfolio featuring modern technologies and a 
 - Smooth animations and hover effects
 
 **🔧 Technical Excellence**
+
 - Supabase integration for backend services
 - Row Level Security for data protection
 - Environment variable management
@@ -73,6 +77,7 @@ This is a complete rewrite of the portfolio featuring modern technologies and a 
 ### 🛠️ For Developers
 
 **New Tech Stack:**
+
 ```
 Frontend: React 19 + TypeScript + Tailwind CSS 4
 Backend: Supabase (PostgreSQL + Real-time)
@@ -82,6 +87,7 @@ Deployment: GitHub Actions
 ```
 
 **Quick Start:**
+
 ```bash
 git clone https://github.com/VIG-NESH-M/vigneshmportfolio.git
 cd vigneshmportfolio
@@ -94,7 +100,7 @@ npm run dev
 ### 📚 Documentation
 
 - **Comprehensive README** with setup guides
-- **FEATURES.md** with technical specifications  
+- **FEATURES.md** with technical specifications
 - **DEPLOYMENT.md** with platform-specific guides
 - **Contributing guidelines** for collaboration
 - **MIT License** for open source usage
@@ -128,6 +134,7 @@ See [DEPLOYMENT.md](./DEPLOYMENT.md) for detailed migration guide.
 ### 🎯 What's Next
 
 **v2.1.0 Roadmap:**
+
 - Blog system with markdown support
 - Analytics dashboard
 - Multi-language support
@@ -136,6 +143,7 @@ See [DEPLOYMENT.md](./DEPLOYMENT.md) for detailed migration guide.
 ### 💝 Acknowledgments
 
 Special thanks to the open source community and the technologies that made this possible:
+
 - React Team for React 19
 - Vercel for Tailwind CSS 4
 - Supabase for the amazing backend platform

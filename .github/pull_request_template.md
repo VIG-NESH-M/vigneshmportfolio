@@ -25,14 +25,17 @@ Related to #(issue number)
 ### 🔄 Changes Made
 
 #### ✨ New Features
+
 - Feature 1: Description
 - Feature 2: Description
 
 #### 🐛 Bug Fixes
+
 - Fix 1: Description
 - Fix 2: Description
 
 #### 🔄 Improvements
+
 - Improvement 1: Description
 - Improvement 2: Description
 
@@ -47,11 +50,13 @@ Related to #(issue number)
 ### 🧪 Testing
 
 #### Test Environment
+
 - [ ] Local development
 - [ ] Staging environment
 - [ ] Production environment
 
 #### Browser Testing
+
 - [ ] Chrome
 - [ ] Firefox
 - [ ] Safari
@@ -59,6 +64,7 @@ Related to #(issue number)
 - [ ] Mobile browsers
 
 #### Test Cases
+
 - [ ] Feature works as expected
 - [ ] No regressions introduced
 - [ ] Error handling works correctly
@@ -90,17 +96,21 @@ Related to #(issue number)
 ### 📦 Dependencies
 
 #### New Dependencies
+
 - dependency@version: reason for adding
 
 #### Updated Dependencies
+
 - dependency@old-version → new-version: reason for update
 
 #### Removed Dependencies
+
 - dependency@version: reason for removal
 
 ### 🚀 Deployment Notes
 
 Any special deployment considerations:
+
 - [ ] Database migrations needed
 - [ ] Environment variables updated
 - [ ] Configuration changes required
@@ -120,6 +130,7 @@ Any special deployment considerations:
 ### 🎯 Focus Areas for Review
 
 Please pay special attention to:
+
 - [ ] Code quality and structure
 - [ ] Performance implications
 - [ ] Security considerations
@@ -130,6 +141,7 @@ Please pay special attention to:
 ### 🔄 Next Steps
 
 After this PR is merged:
+
 - [ ] Deploy to staging
 - [ ] Update documentation
 - [ ] Notify stakeholders

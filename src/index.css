@@ -865,6 +865,7 @@ body::after {
   display: flex;
   gap: 1.5rem;
   margin-top: 1.5rem;
+  margin-bottom: clamp(3rem, 6vh, 5rem);
   opacity: 0;
   animation: fadeInUp 1s ease-out 1.1s forwards;
 }
@@ -959,7 +960,9 @@ body::after {
 
 .scroll-indicator {
   position: absolute;
-  bottom: 2rem;
+  bottom: clamp(1.5rem, 4vh, 3rem);
+  left: 50%;
+  transform: translateX(-50%);
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -1204,7 +1207,7 @@ body::after {
   }
 
   .scroll-indicator {
-    bottom: 1.5rem;
+    bottom: clamp(1rem, 3vh, 2rem);
   }
 
   .orb-1,
@@ -1274,6 +1277,7 @@ body::after {
   .hero-cta {
     gap: clamp(0.5rem, 1vh, 0.75rem);
     margin-top: clamp(0.5rem, 1vh, 1rem);
+    margin-bottom: clamp(2rem, 4vh, 3rem);
     max-width: 100%;
     width: 100%;
   }
@@ -1300,7 +1304,7 @@ body::after {
   }
 
   .scroll-indicator {
-    bottom: 1rem;
+    bottom: clamp(0.75rem, 2vh, 1.5rem);
     gap: 0.5rem;
   }
 
@@ -1356,6 +1360,7 @@ body::after {
     gap: clamp(0.5rem, 0.75vh, 0.6rem);
     max-width: 100%;
     margin-top: clamp(0.5rem, 0.75vh, 0.75rem);
+    margin-bottom: clamp(1.5rem, 3vh, 2.5rem);
   }
 
   .cta-button {
@@ -1369,7 +1374,7 @@ body::after {
   }
 
   .scroll-indicator {
-    bottom: 0.75rem;
+    bottom: clamp(0.5rem, 1.5vh, 1rem);
   }
 
   .scroll-mouse {
@@ -1447,6 +1452,32 @@ body::after {
 
   .hero-cta {
     margin-top: clamp(0.25rem, 0.5vh, 0.5rem);
+    margin-bottom: clamp(1rem, 2vh, 1.5rem);
+  }
+
+  .scroll-indicator {
+    bottom: clamp(0.25rem, 1vh, 0.75rem);
+  }
+}
+
+/* Very short viewports - hide scroll indicator to prevent overlap */
+@media (max-height: 650px) {
+  .scroll-indicator {
+    opacity: 0.5;
+    bottom: clamp(0.5rem, 1.5vh, 1rem);
+  }
+}
+
+@media (max-height: 550px) {
+  .scroll-indicator {
+    display: none;
+  }
+}
+
+/* Ultra short screens */
+@media (max-height: 450px) {
+  .hero-cta {
+    margin-bottom: clamp(0.5rem, 1vh, 1rem);
   }
 
   .hero-stats {

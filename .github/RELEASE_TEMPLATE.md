@@ -5,16 +5,19 @@
 <!-- Describe the main features and improvements in this release -->
 
 #### ✨ New Features
+
 - Feature 1: Description
 - Feature 2: Description
 - Feature 3: Description
 
 #### 🔄 Improvements
+
 - Improvement 1: Description
 - Improvement 2: Description
 - Improvement 3: Description
 
 #### 🐛 Bug Fixes
+
 - Fix 1: Description
 - Fix 2: Description
 - Fix 3: Description
@@ -22,6 +25,7 @@
 ### 📊 Performance & Metrics
 
 <!-- Include performance improvements if any -->
+
 - Lighthouse Performance Score: XX/100
 - Bundle Size: XXX KB
 - Load Time: X.X seconds
@@ -29,12 +33,14 @@
 ### 🔒 Security
 
 <!-- List any security improvements -->
+
 - Security improvement 1
 - Security improvement 2
 
 ### 💔 Breaking Changes
 
 <!-- List any breaking changes -->
+
 > ⚠️ **Warning**: This release contains breaking changes
 
 - Breaking change 1: Migration steps
@@ -43,16 +49,19 @@
 ### 🛠️ Technical Details
 
 **Dependencies Updated:**
+
 - dependency@version
 - dependency@version
 
 **New Dependencies:**
+
 - new-dependency@version
 - new-dependency@version
 
 ### 🚀 Deployment
 
 This release includes:
+
 - [ ] GitHub Pages deployment
 - [ ] Vercel compatibility
 - [ ] Netlify compatibility
@@ -68,6 +77,7 @@ This release includes:
 ### 🧪 Testing
 
 This release has been tested on:
+
 - [ ] Chrome (latest)
 - [ ] Firefox (latest)
 - [ ] Safari (latest)
@@ -100,12 +110,14 @@ npm run dev
 ### 👥 Contributors
 
 Thanks to all contributors who made this release possible:
+
 - @contributor1
 - @contributor2
 
 ### 🙏 Acknowledgments
 
 Special thanks to:
+
 - Community members who provided feedback
 - Libraries and frameworks that power this project
 - Beta testers who helped identify issues
