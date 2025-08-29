@@ -6,9 +6,11 @@ import { type Theme } from "../types/portfolioTypes";
  */
 export const applyTheme = (theme: Theme): void => {
   if (typeof document !== "undefined") {
-    // Apply custom theme classes for CSS variables
-    document.body.className = `${theme}-theme`;
-    document.documentElement.className = `${theme}-theme`;
+    // Remove existing theme classes then add the new one without clobbering others
+    document.body.classList.remove("dark-theme", "light-theme");
+    document.documentElement.classList.remove("dark-theme", "light-theme");
+    document.body.classList.add(`${theme}-theme`);
+    document.documentElement.classList.add(`${theme}-theme`);
 
     // Apply Tailwind dark mode class
     if (theme === "dark") {
@@ -16,6 +18,8 @@ export const applyTheme = (theme: Theme): void => {
     } else {
       document.documentElement.classList.remove("dark");
     }
+
+    // Do not mutate custom CSS; it contains rules for both themes
   }
 };
 

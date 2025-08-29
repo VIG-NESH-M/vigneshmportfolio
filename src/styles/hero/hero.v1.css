@@ -1,0 +1,19 @@
+/* Hero Variant V1 – Bold center classic */
+.variant-hero-v1 .hero-name {
+  font-weight: 900;
+  letter-spacing: -0.015em;
+}
+
+.variant-hero-v1 .hero-subtitle {
+  gap: 0.35rem;
+}
+
+.variant-hero-v1 .hero-cta .primary {
+  box-shadow: 0 10px 30px rgba(var(--color-accent-rgb), 0.25);
+}
+
+@media (max-width: 700px) {
+  .variant-hero-v1 .hero-name {
+    font-size: clamp(2rem, 9vw, 3rem);
+  }
+}

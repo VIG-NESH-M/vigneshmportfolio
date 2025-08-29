@@ -3,6 +3,7 @@ import { AdminShell } from "./pages/AdminShell";
 import { RouterProvider, RouterOutlet, Link, type Route } from "./utils/router";
 import { useContext } from "react";
 import { RouterContext } from "./contexts/RouterContext";
+import { useThemeColors } from "./hooks/useThemeColors";
 
 // Define routes
 const routes: Route[] = [
@@ -65,6 +66,9 @@ const AdminAccessButton = () => {
 };
 
 function App() {
+  // Load and apply custom colors on app start
+  useThemeColors();
+
   return (
     <RouterProvider routes={routes}>
       <div>

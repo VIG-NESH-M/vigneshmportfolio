@@ -1,6 +1,7 @@
 import React, { useState, useEffect, useRef } from "react";
 import { portfolioData as staticPortfolioData } from "./data/portfolioData";
 import { useSupabasePortfolio } from "./hooks/useSupabasePortfolio";
+import { getPortfolioConfig } from "./lib/supabase";
 import { LoadingSpinner } from "./components/LoadingSpinner";
 import { ContactForm } from "./components/ContactForm";
 import { socialIcons } from "./components/icons/SocialIcons";
@@ -30,6 +31,19 @@ const PortfolioContent: React.FC = () => {
   const { addNotification } = useNotifications();
   const { data, isLoading, error } = useSupabasePortfolio();
   const portfolioData = data ?? staticPortfolioData;
+  const [sectionVariants, setSectionVariants] = useState<
+    Record<string, string>
+  >({});
+
+  // Load selected section variants once
+  useEffect(() => {
+    (async () => {
+      const cfg = await getPortfolioConfig();
+      if (cfg?.section_variants) {
+        setSectionVariants(cfg.section_variants);
+      }
+    })();
+  }, []);
 
   const toggleTheme = (): void => {
     setTheme((prev) => {
@@ -190,6 +204,12 @@ const PortfolioContent: React.FC = () => {
     );
   }
 
+  const heroVariant = (sectionVariants["hero"] || "v1").toLowerCase();
+  const aboutVariant = (sectionVariants["about"] || "v1").toLowerCase();
+  const workVariant = (sectionVariants["work"] || "v1").toLowerCase();
+  const socialsVariant = (sectionVariants["socials"] || "v1").toLowerCase();
+  const contactVariant = (sectionVariants["contact"] || "v1").toLowerCase();
+
   return (
     <div className="antialiased">
       {/* Skip to main content link for accessibility */}
@@ -211,7 +231,11 @@ const PortfolioContent: React.FC = () => {
         onToggleTheme={toggleTheme}
       />
 
-      <header id="home" className="hero-section">
+      <header
+        id="home"
+        className={`hero-section variant-hero-${heroVariant}`}
+        data-variant={heroVariant}
+      >
         <div className="hero-background">
           <div className="gradient-orb orb-1"></div>
           <div className="gradient-orb orb-2"></div>
@@ -224,18 +248,31 @@ const PortfolioContent: React.FC = () => {
         </div>
 
         <div className="hero-content">
-          <div className="hero-greeting">
+          <div
+            className={`hero-greeting ${
+              heroVariant === "v2" ? "justify-center" : ""
+            }`}
+          >
             <span className="greeting-text">
               <span className="greeting-dot"></span> Hello, I'm
             </span>
           </div>
 
-          <h1 className="hero-name" ref={heroTextRef}>
+          <h1
+            className={`hero-name ${
+              heroVariant === "v3" ? "tracking-tight" : ""
+            }`}
+            ref={heroTextRef}
+          >
             {portfolioData.name}
             <span className="name-highlight"></span>
           </h1>
 
-          <div className="hero-subtitle">
+          <div
+            className={`hero-subtitle ${
+              heroVariant === "v2" ? "flex-col md:flex-row" : ""
+            }`}
+          >
             <span className="subtitle-text">Full-Stack Developer</span>
             <span className="subtitle-accent">& Digital Creator</span>
           </div>
@@ -270,7 +307,11 @@ const PortfolioContent: React.FC = () => {
             </div>
           </div>
 
-          <div className="hero-cta">
+          <div
+            className={`hero-cta ${
+              heroVariant === "v2" ? "flex-col sm:flex-row" : ""
+            }`}
+          >
             <button
               className="cta-button primary"
               onClick={() => handleSectionNavigation("work")}
@@ -312,7 +353,7 @@ const PortfolioContent: React.FC = () => {
         </div>
       </header>
 
-      <div className="terminal-window">
+      <div className={`terminal-window variant-work-${workVariant}`}>
         <div className="terminal-header">
           <span className="window-dot" style={{ background: "#f87171" }}></span>
           <span className="window-dot" style={{ background: "#fbbd23" }}></span>

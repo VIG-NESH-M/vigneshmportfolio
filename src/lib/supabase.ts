@@ -12,6 +12,34 @@ export const supabase = createClient(supabaseUrl, supabaseAnonKey);
 // TYPE DEFINITIONS
 // =============================================================================
 
+export interface ColorScheme {
+  primary: string;
+  primaryRgb: string;
+  secondary: string;
+  secondaryRgb: string;
+  background: string;
+  backgroundLight: string;
+  text: string;
+  textLight: string;
+  surface: string;
+  surfaceLight: string;
+  surfaceSecondary: string;
+  surfaceSecondaryLight: string;
+  border: string;
+  borderLight: string;
+  success: string;
+  warning: string;
+  error: string;
+  info: string;
+}
+
+export interface ColorPreset {
+  name: string;
+  description: string;
+  colors: ColorScheme;
+  category: string;
+}
+
 export interface PortfolioConfig {
   id: string;
   name: string;
@@ -22,6 +50,10 @@ export interface PortfolioConfig {
   hero_years_experience: string;
   hero_projects_completed: string;
   hero_technologies: string;
+  theme_colors?: ColorScheme;
+  color_presets?: ColorPreset[];
+  // New: selected UI variants per section (e.g., { hero: "v2", about: "v1" })
+  section_variants?: Record<string, string>;
   created_at: string;
   updated_at: string;
 }

@@ -1,0 +1,10 @@
+/* Hero Variant V3 – Tight tracking and minimal */
+.variant-hero-v3 .hero-name { letter-spacing: -0.03em; font-weight: 800; }
+.variant-hero-v3 .hero-description p { max-width: 46rem; opacity: 0.9; }
+.variant-hero-v3 .hero-cta .secondary { border-style: dashed; }
+
+@media (max-width: 700px) {
+  .variant-hero-v3 .hero-description p { padding: 0 0.5rem; }
+}
+
+

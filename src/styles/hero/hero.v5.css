@@ -1,0 +1,14 @@
+/* Hero Variant V5 – Big name with accent underline */
+.variant-hero-v5 .hero-name {
+  position: relative;
+  padding-bottom: 0.35rem;
+}
+.variant-hero-v5 .hero-name .name-highlight {
+  position: absolute;
+  left: 0; right: 0; bottom: -0.2rem; height: 6px;
+  background: linear-gradient(90deg, var(--accent-color), rgba(var(--color-secondary-rgb), 1));
+  border-radius: 999px;
+}
+.variant-hero-v5 .hero-cta { gap: 1rem; }
+
+

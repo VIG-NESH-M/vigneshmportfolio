@@ -1,0 +1,12 @@
+/* Hero Variant V4 – Left-aligned editorial style */
+.variant-hero-v4 { align-items: flex-start; text-align: left; }
+.variant-hero-v4 .hero-content { align-items: flex-start; }
+.variant-hero-v4 .hero-name { font-weight: 900; }
+.variant-hero-v4 .hero-cta { justify-content: flex-start; }
+
+@media (max-width: 700px) {
+  .variant-hero-v4 { align-items: center; text-align: center; }
+  .variant-hero-v4 .hero-content { align-items: center; }
+}
+
+

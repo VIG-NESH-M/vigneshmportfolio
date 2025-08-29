@@ -17,6 +17,7 @@ import {
   Eye,
   EyeOff,
   Loader2,
+  Palette,
 } from "lucide-react";
 import { RouterContext } from "../contexts/RouterContext";
 import { AdminLayout } from "../components/admin/layout/AdminLayout";
@@ -27,6 +28,8 @@ import { SocialLinksManager } from "../components/admin/SocialLinksManager";
 import { ProjectsManager } from "../components/admin/ProjectsManager";
 import { SkillsManager } from "../components/admin/SkillsManager";
 import { MessagesManager } from "../components/admin/MessagesManager";
+import ColorCustomizer from "../components/admin/ColorCustomizer";
+import SectionVariantsManager from "../components/admin/SectionVariantsManager";
 import {
   isCurrentUserAdmin,
   signInAdmin,
@@ -66,6 +69,8 @@ export const AdminShell: React.FC = () => {
       | "projects"
       | "skills"
       | "messages"
+      | "colors"
+      | "layouts"
   );
   const [authed, setAuthed] = useState(false);
   const [loading, setLoading] = useState(true);
@@ -312,6 +317,8 @@ export const AdminShell: React.FC = () => {
         { id: "projects", label: "Projects", icon: <Code /> },
         { id: "skills", label: "Skills", icon: <Zap /> },
         { id: "messages", label: "Messages", icon: <MessageSquare /> },
+        { id: "colors", label: "Colors", icon: <Palette /> },
+        { id: "layouts", label: "Layouts", icon: <LayoutDashboard /> },
       ]}
       activeSectionId={active}
       onSelect={(id) =>
@@ -325,6 +332,8 @@ export const AdminShell: React.FC = () => {
             | "projects"
             | "skills"
             | "messages"
+            | "colors"
+            | "layouts"
         )
       }
       onLogout={onLogout}
@@ -663,6 +672,8 @@ export const AdminShell: React.FC = () => {
       {active === "projects" && <ProjectsManager />}
       {active === "skills" && <SkillsManager />}
       {active === "messages" && <MessagesManager />}
+      {active === "colors" && <ColorCustomizer />}
+      {active === "layouts" && <SectionVariantsManager />}
     </AdminLayout>
   );
 };

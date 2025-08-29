@@ -560,6 +560,13 @@ body::after {
     var(--background-color);
 }
 
+/* Hero variants */
+@import url("./styles/hero/hero.v1.css");
+@import url("./styles/hero/hero.v2.css");
+@import url("./styles/hero/hero.v3.css");
+@import url("./styles/hero/hero.v4.css");
+@import url("./styles/hero/hero.v5.css");
+
 /* Improve mobile viewport handling */
 @supports (height: 100dvh) {
   .hero-section {
@@ -961,8 +968,11 @@ body::after {
 .scroll-indicator {
   position: absolute;
   bottom: clamp(1.5rem, 4vh, 3rem);
-  left: 50%;
-  transform: translateX(-50%);
+  left: 0;
+  right: 0;
+  margin-left: auto;
+  margin-right: auto;
+  width: max-content;
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -2929,5 +2939,48 @@ body::after {
 
   .contact-form__submit {
     padding: 14px 18px;
+  }
+}
+
+@media (max-height: 700px) {
+  .hero-section {
+    min-height: 100vh;
+    padding-top: clamp(0.75rem, 6vh, 2rem);
+    padding-bottom: clamp(0.75rem, 4vh, 1.5rem);
+    justify-content: flex-start;
+  }
+
+  .hero-content {
+    gap: clamp(0.5rem, 2vh, 1rem);
+  }
+
+  .hero-name {
+    font-size: clamp(2rem, 8vh, 3.25rem);
+    line-height: 1.1;
+    margin: clamp(0.25rem, 1vh, 0.75rem) 0;
+  }
+
+  .hero-subtitle .subtitle-text,
+  .hero-subtitle .subtitle-accent {
+    font-size: clamp(1rem, 3.5vh, 1.25rem);
+  }
+
+  .hero-description p {
+    font-size: clamp(0.95rem, 2.5vh, 1.05rem);
+  }
+
+  .hero-cta {
+    gap: clamp(0.5rem, 1.5vh, 0.75rem);
+    margin-top: clamp(0.5rem, 2vh, 1rem);
+    margin-bottom: clamp(1rem, 2.5vh, 1.5rem);
+  }
+
+  .hero-stats {
+    gap: clamp(0.5rem, 1.5vh, 0.75rem);
+    margin-top: clamp(0.5rem, 2vh, 1rem);
+  }
+
+  .scroll-indicator {
+    bottom: clamp(0.5rem, 2vh, 1rem);
   }
 }

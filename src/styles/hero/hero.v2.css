@@ -1,0 +1,12 @@
+/* Hero Variant V2 – Split subtitle and stacked CTA */
+.variant-hero-v2 .hero-greeting { opacity: 0.85; }
+.variant-hero-v2 .hero-name { font-weight: 800; letter-spacing: -0.01em; }
+.variant-hero-v2 .hero-subtitle { flex-direction: column; gap: 0.25rem; }
+.variant-hero-v2 .hero-cta { flex-direction: column; gap: 0.75rem; }
+
+@media (min-width: 640px) {
+  .variant-hero-v2 .hero-subtitle { flex-direction: row; }
+  .variant-hero-v2 .hero-cta { flex-direction: row; }
+}
+
+

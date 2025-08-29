@@ -81,8 +81,30 @@
         };
 
         const theme = getInitialTheme();
-        document.documentElement.className = theme + "-theme";
-        document.body.className = theme + "-theme";
+        // Use classList to avoid clobbering
+        document.documentElement.classList.remove("dark-theme", "light-theme");
+        document.body.classList.remove("dark-theme", "light-theme");
+        document.documentElement.classList.add(theme + "-theme");
+        document.body.classList.add(theme + "-theme");
+        if (theme === "dark") {
+          document.documentElement.classList.add("dark");
+        } else {
+          document.documentElement.classList.remove("dark");
+        }
+
+        // Rehydrate custom theme CSS early to avoid flash
+        try {
+          const css = localStorage.getItem("portfolio-custom-theme-css");
+          if (css) {
+            let styleEl = document.getElementById("custom-theme-colors");
+            if (!styleEl) {
+              styleEl = document.createElement("style");
+              styleEl.id = "custom-theme-colors";
+              document.head.appendChild(styleEl);
+            }
+            styleEl.textContent = css;
+          }
+        } catch {}
       })();
     </script>
   </head>
